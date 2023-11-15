@@ -1,41 +1,42 @@
 import React from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import DownArrow from '@/components/DownArrow'
-import AVAV from '@/components/AVAV'
+import DownArrow from '@/public/assets/DownArrow.svg'
+import AVAV from "@/public/assets/AVAV.svg";
+import Image from 'next/image';
 
 const PageTwo = () => {
   return (
 <div className="h-full" >
       {/* <Image alt="" className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
       <div className="h-full relative flex justify-center items-center tracking-widest">
-      <div className="text-left absolute top-32 left-16">
+      <div className="text-center max-lg:text-xs absolute top-4 lg:top-16">a real estate and property platform that is changing the world</div>
+      <div className="text-left absolute top-24 lg:top-32 left-4 lg:left-16">
         <div>
-          <h3 className=' text-[29px]'>a revolutionary platform</h3>
-          <h2 className=' text-[50px]'>entries - sellers</h2>
-          <h1 className=' text-[70px]'>worldwide</h1>
+          <h3 className='max-lg:text-xs text-[29px]'>a revolutionary platform</h3>
+          <h2 className='max-lg:text-lg text-[50px]'>entries - sellers</h2>
+          <h1 className='max-xl:text-3xl text-[70px]'>worldwide</h1>
         </div>
       </div>
-      <div className="text-center absolute top-16">a real estate and property platform that is changing the world</div>
-      <div className="text-right absolute space-y-16 right-16">
-      <span className=" w-[589px] h-[144px]">
-      <AVAV width="589" height="144" color="#000" />
-        </span>
+      <div className="text-right max-lg:w-full max-lg:flex max-lg:flex-col max-lg:items-center absolute space-y-16 lg:right-16">
+      
+        <Image src={AVAV} className='invert w-[589px] max-lg:p-4 ma-h-[144px]'/>
+       
         <div>
-          <p className=' text-center leading-16'>connecting users from across the globe <br/> to facilitate life's most important <br/> personal transaction</p>
+          <p className=' text-left p-2 lg:text-center leading-16'>connecting users from across the globe <br/> to facilitate life's most important <br/> personal transaction</p>
         </div>
       </div>
-      <div className="text-left absolute bottom-32 left-16">
-        <div className=' space-y-16'>
-          <h3 className=' text-[29px]'>The best of the best</h3>
-          <p className=' text-[20px] md:w-1/2'>A COMBINATION OF AUTOMATION AND MANUAL CURATION OUR PRO AGENTS AND
+      <div className="text-left absolute bottom-32 left-4 lg:left-16">
+        <div className=' space-y-4 lg:space-y-16'>
+          <h3 className='max-lg:text-xs text-[29px]'>The best of the best</h3>
+          <p className='max-lg:text-xs text-[20px] lg:w-1/2'>A COMBINATION OF AUTOMATION AND MANUAL CURATION OUR PRO AGENTS AND
 MODERATION TEAM SELECTS THE HIGHEST QUALITY LISTINGS ON THE MARKET
 FROM ACROSS THE WORLD.</p>
         </div>
       </div>
       <div className="text-center absolute bottom-4 ">
       <button className=" animate-bounce invert">
-      <DownArrow width="80" height="40"  />
+      <Image className=" h-[30px] lg:h-[80px]" src={DownArrow}/>
           </button>
       </div>
     </div>

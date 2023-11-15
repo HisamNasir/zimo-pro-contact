@@ -1,4 +1,4 @@
-import DownArrow from '@/components/DownArrow'
+import DownArrow from '@/public/assets/DownArrow.svg'
 import React from 'react'
 import Image1 from '@/public/assets/diamond.png';
 import Image2 from '@/public/assets/island.png';
@@ -9,6 +9,7 @@ import Image6 from '@/public/assets/watches.png';
 import Image7 from '@/public/assets/jets.png';
 import Image8 from '@/public/assets/travelworld.png';
 import Card from '@/components/Card';
+import Image from 'next/image';
 const PageThree = () => {
     
   return (
@@ -17,9 +18,9 @@ const PageThree = () => {
     <div className="h-full relative flex justify-center items-center tracking-widest">
     <div className="text-left absolute top-16 left-16 text-[40px]">our categories</div>
 
-    <div className="text-right absolute top-16 right-16 w-[129px] flex justify-between">
-        <button id='left' className=' invert rotate-90'><DownArrow width="40" height="20"/></button>
-        <button id='right'className=' invert -rotate-90'><DownArrow width="40" height="20"/></button>
+    <div className="text-right max-md:hidden absolute top-16 right-16 w-[129px]  flex justify-between">
+        <button id='left' className=' invert rotate-90'><Image src={DownArrow} className='h-[20px]' /></button>
+        <button id='right'className=' invert -rotate-90'><Image src={DownArrow} className='h-[20px]' /></button>
     </div>
     <div className='overflow-x-scroll absolute bottom-[35%] w-full'>
         <div className='grid grid-flow-col space-x-2 p-2'>
@@ -33,7 +34,7 @@ const PageThree = () => {
           <Card image={Image8} text="travel the world" />
         </div>
       </div>
-    <div className="text-center absolute bottom-40 text-4xl space-y-12 "><h1>one platform for all premium listings</h1><p className=' font-light'>unlimited potential</p></div>
+    <div className="text-center absolute bottom-40 text-xl lg:text-4xl space-y-12 "><h1>one platform for all premium listings</h1><p className=' font-light'>unlimited potential</p></div>
   </div>
 </div>
   )

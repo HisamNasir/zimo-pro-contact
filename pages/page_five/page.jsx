@@ -1,13 +1,15 @@
 import React from "react";
 import Wallpaper from "@/public/assets/fifthWallpaper.png";
 import Image from "next/image";
-import AVAV from "@/components/AVAV";
-import LongArrow from "@/components/LongArrow";
+
+import AVAV from "@/public/assets/AVAV.svg";
+import BackArrow from '@/public/assets/BackArrow.svg'
 const PageFive = () => {
+  
   return (
     <div className="h-full bg-black ">
       <Image
-        className="absolute h-full w-full object-cover -z-160 opacity-90"
+        className="absolute h-full w-full object-cover -z-100 opacity-90 "
         src={Wallpaper}
         width={3841}
         height={2159}
@@ -28,16 +30,16 @@ that opportunity of a lifetime is here.
         </div>
         <div className="text-left absolute left-16">
           <div>
-            <div className=" opacity-10">
-              <AVAV width="547px" height="134" color="#fff" />
+            <div className=" opacity-10 animate-pulse  delay-500">
+          <Image className=" h-[134x] w-[547px]" src={AVAV}/>
             </div>
           </div>
         </div>
 
-        <div className="text-right absolute right-16 flex gap-2 items-center ">
+        <button className="text-right z-10 absolute right-16 flex gap-2 items-center p-4 hover:translate-x-8 transition-all duration-500 ">
           <p>create user id</p>
-          <LongArrow />
-        </div>
+          <Image className=" h-[16px] rotate-180" src={BackArrow}/>
+        </button>
 
       </div>
     </div>
