@@ -6,6 +6,9 @@ import PageThree from "./page_three/page";
 import { useEffect, useState } from 'react';
 import PageFour from "./page_four/page";
 import PageFive from "./page_five/page";
+import PageSix from "./page_six/page";
+import PageSeven from "./page_seven/page";
+import PageEight from "./page_eight/page";
 export default function Home() {
 
   return (
@@ -21,6 +24,9 @@ export default function Home() {
         <PageThree/>
         <PageFour/>
         <PageFive/>
+        <PageSix/>
+        <PageSeven/>
+        <PageEight/>
     </main>
     </>
   )
