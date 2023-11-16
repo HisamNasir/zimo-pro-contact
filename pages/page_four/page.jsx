@@ -33,7 +33,7 @@ for all premium listings
         <div className='max-lg:px-7'>
             <Image src={ImageCard} width={1083} height={718}/>
         </div>
-        <p className=' text-3xl text-center mt-20'>let your dreams find you</p>
+        <p className=' text-3xl text-center mt-10'>let your dreams find you</p>
     </div>
 
   </div>
