@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import AVAVBorder from '@/public/assets/AVAVBorder.svg'
@@ -14,6 +16,33 @@ import Wallpaper from '@/public/assets/Page1bg.png'
 import "aos/dist/aos.css";
 
 const PageOne = () => {
+  const [shouldScroll, setShouldScroll] = useState(false);
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+
+    const handleScroll = () => {
+      if (window.scrollY >= window.innerHeight) {
+        setShouldScroll(true);
+      } else {
+        setShouldScroll(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (shouldScroll) {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+    }
+  }, [shouldScroll]);
+
+
   return (
     <div className="h-full bg-black relative overflow-hidden">
       <Image
@@ -70,9 +99,9 @@ const PageOne = () => {
             <p className=" md:text-xl text-[#737373] mt-6">
               Bringing the world closer together
             </p>
-            <button className="animate-bounce">
-            <Image className=" h-[30px] sm:h-[80px]" src={DownArrow}/>
-            </button>
+            <button className="animate-bounce invert" onClick={() => setShouldScroll(true)}>
+          <Image className="h-[30px] lg:h-[80px] invert" src={DownArrow} />
+        </button>
           </div>
         </div>
       </div>

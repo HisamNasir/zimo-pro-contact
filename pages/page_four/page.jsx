@@ -11,13 +11,13 @@ const PageFour = () => {
     <div className="text-left pl-2  lg:pl-16">
         <div className='leading-tight space-y-8'>
             <div className='mb-8'>
-                <Image className=' h-[152px]' src={ZIMA}/>
+                <Image className=' h-[152px] w-full px-3 invert' src={ZIMA}/>
             </div>
             <div>
-            <h2 className=' text-[40pt]'>
+            <h2 className=' text-xl xl:mb-8  xl:text-[40pt]'>
                 one source
             </h2>
-            <h1 className=' text-[60pt]'>
+            <h1 className=' text-2xl xl:text-[60pt]'>
                 entry ticket
             </h1>
 
@@ -30,7 +30,7 @@ for all premium listings
     </div>
 
     <div className=" lg:pr-16 translate-y-20">
-        <div>
+        <div className='max-lg:px-7'>
             <Image src={ImageCard} width={1083} height={718}/>
         </div>
         <p className=' text-3xl text-center mt-20'>let your dreams find you</p>

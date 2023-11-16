@@ -1,11 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import DownArrow from '@/public/assets/DownArrow.svg'
 import AVAV from "@/public/assets/AVAV.svg";
 import Image from 'next/image';
 
+
 const PageTwo = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+
+    const handleScrollDown = () => {
+      window.scrollTo({
+        top: window.innerHeight*2,
+        behavior: 'smooth',
+      });
+    };
+
+    const downArrowButton = document.getElementById('down-arrow-button');
+    if (downArrowButton) {
+      downArrowButton.addEventListener('click', handleScrollDown);
+    }
+
+    return () => {
+      if (downArrowButton) {
+        downArrowButton.removeEventListener('click', handleScrollDown);
+      }
+    };
+  }, []);
+
   return (
 <div className="h-full" >
       {/* <Image alt="" className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
@@ -35,9 +58,9 @@ FROM ACROSS THE WORLD.</p>
         </div>
       </div>
       <div className="text-center absolute bottom-4 ">
-      <button className=" animate-bounce invert">
-      <Image className=" h-[30px] lg:h-[80px]" src={DownArrow}/>
-          </button>
+      <button id="down-arrow-button" className="animate-bounce invert">
+          <Image className="h-[30px] lg:h-[80px]" src={DownArrow} />
+        </button>
       </div>
     </div>
 </div>
