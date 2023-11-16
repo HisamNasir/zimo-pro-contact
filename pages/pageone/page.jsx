@@ -55,9 +55,9 @@ const PageOne = () => {
       <div className="h-full relative flex flex-col justify-center items-center text-white tracking-widest">
         <div className="text-left space-y-16 absolute left-2 lg:left-16 top-2 sm:top-16">
           <div className="  invert flex gap-2 xl:gap-16 items-end">
-            <Image className="invert h-[25px] w-auto" src={AVAVBorder}/>
+            <Image className="invert h-[25px] md:h-[50px] w-auto" src={AVAVBorder}/>
             
-            <Image className="invert  h-[25px] w-auto xl:h-[50px]" src={ZIMA}/>
+            <Image className="invert  h-[25px] w-auto md:h-[50px]" src={ZIMA}/>
             
             <p className="invert">about</p>
           </div>
