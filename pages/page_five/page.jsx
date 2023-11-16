@@ -7,15 +7,15 @@ import BackArrow from '@/public/assets/BackArrow.svg'
 const PageFive = () => {
   
   return (
-    <div className="h-full bg-black ">
+    <div className="h-screen bg-black ">
       <Image
         className="absolute h-full w-full object-cover -z-100 opacity-90 "
         src={Wallpaper}
         width={3841}
         height={2159}
       />
-      <div className="h-full relative flex justify-center items-center text-white tracking-widest">
-        <div className="text-left absolute top-16 right-16">
+      <div className="h-full relative flex p-4 lg:justify-center items-center text-white tracking-widest">
+        <div className="text-left absolute top-16 lg:right-16">
           <div>
             <h2 className=" text-4xl mb-8">Personalised for you</h2>
             <p className=" text-xs lg:text-xl lg:leading-10 opacity-50">
