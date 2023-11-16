@@ -53,9 +53,9 @@ const PageOne = () => {
         height={2159}
       />
       <div className="h-full relative flex flex-col justify-center items-center text-white tracking-widest">
-        <div className="text-left space-y-16 absolute left-16 top-0 sm:top-16">
-          <div className=" max-lg:hidden invert flex gap-2 xl:gap-16 items-end">
-            <Image className="invert  h-[25px] xl:h-[60px]" src={AVAVBorder}/>
+        <div className="text-left space-y-16 absolute left-2 lg:left-16 top-2 sm:top-16">
+          <div className="  invert flex gap-2 xl:gap-16 items-end">
+            <Image className="invert h-[25px] w-auto" src={AVAVBorder}/>
             
             <Image className="invert  h-[25px] w-auto xl:h-[50px]" src={ZIMA}/>
             
@@ -71,9 +71,9 @@ const PageOne = () => {
           <Image className="invert h-[25px] xl:h-[50px]" src={AVAV}/>
           </span>
         </div>
-        <div className=" max-sm:hidden text-right absolute top-9 md:top-16 right-16">
+        <div className="text-right absolute top-2 md:top-16 right-2 lg:right-16  sm:top-16">
           <div className=" flex items-center gap-14">
-            <div className="flex items-center gap-4 text-[14px] leading-4">
+            <div className="flex max-lg:hidden items-center gap-4 text-[14px] leading-4">
               <span className="">
                 <Clock />
               </span>
