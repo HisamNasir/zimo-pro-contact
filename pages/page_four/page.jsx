@@ -6,7 +6,7 @@ const PageFour = () => {
   return (
     <div className="h-screen" >
     {/* <Image className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
-    <div className="h-full relative lg:flex justify-between  items-center tracking-widest">
+    <div className="h-full relative flex justify-between  items-center tracking-widest">
 
     <div className="text-left pl-2  lg:pl-16">
         <div className='leading-tight space-y-8'>
