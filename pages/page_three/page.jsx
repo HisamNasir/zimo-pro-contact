@@ -54,7 +54,7 @@ const PageThree = () => {
     <div className="h-full" >
     {/* <Image alt="" className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
     <div className="h-full relative flex justify-center items-center tracking-widest">
-    <div className="text-left absolute top-80 lg:top-16 left-16 text-xl  lg:text-[40px]">our categories</div>
+    <div className="text-left absolute top-16 left-16 text-xl  lg:text-[40px]">our categories</div>
 
     <div className="text-right max-md:hidden absolute top-16 right-16 w-[129px] flex justify-between">
         <button id="left" className="invert rotate-90" >

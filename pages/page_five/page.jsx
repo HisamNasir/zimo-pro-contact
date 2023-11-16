@@ -17,8 +17,8 @@ const PageFive = () => {
       <div className="h-full relative flex justify-center items-center text-white tracking-widest">
         <div className="text-left absolute top-16 right-16">
           <div>
-            <h2 className=" text-[40px] mb-8">Personalised for you</h2>
-            <p className=" text-xl leading-10 opacity-50">
+            <h2 className=" text-4xl mb-8">Personalised for you</h2>
+            <p className=" text-xs lg:text-xl lg:leading-10 opacity-50">
             Delivering thousands of personalised alerts <br/>
 everyday, our USERS can be first in line when<br/>
 that opportunity of a lifetime is here.
