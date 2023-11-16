@@ -14,10 +14,10 @@ const PageFour = () => {
                 <Image className=' h-[152px] w-full px-3 invert' src={ZIMA}/>
             </div>
             <div>
-            <h2 className=' text-xl xl:mb-8  xl:text-[40pt]'>
+            <h2 className=' text-xl xl:mb-8 xl:text-4xl'>
                 one source
             </h2>
-            <h1 className=' text-2xl xl:text-[60pt]'>
+            <h1 className=' text-2xl xl:text-6xl'>
                 entry ticket
             </h1>
 
