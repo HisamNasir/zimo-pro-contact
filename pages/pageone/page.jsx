@@ -44,7 +44,7 @@ const PageOne = () => {
 
 
   return (
-    <div className="h-full bg-black relative overflow-hidden">
+    <div className="h-screen bg-black relative overflow-hidden">
       <Image
         alt=""
         className="absolute h-full w-full object-cover -z-80 opacity-90"

@@ -51,12 +51,13 @@ const PageThree = () => {
   }, []);
 
   return (
-    <div className="h-full" >
+    <div className="h-screen" >
     {/* <Image alt="" className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
-    <div className="h-full relative flex justify-center items-center tracking-widest">
-    <div className="text-left absolute top-16 left-16 text-xl  lg:text-[40px]">our categories</div>
+    <div className="h-full relative flex flex-col justify-between  tracking-widest">
+      <div className='flex relative'>
+    <div className=" p-8  text-xl  lg:text-[40px]">our categories</div>
 
-    <div className="text-right max-md:hidden absolute top-16 right-16 w-[129px] flex justify-between">
+    <div className=" p-8 absolute right-0  w-[129px] flex justify-between">
         <button id="left" className="invert rotate-90" >
           <Image src={DownArrow} className="h-[20px]" />
         </button>
@@ -64,7 +65,9 @@ const PageThree = () => {
           <Image src={DownArrow} className="h-[20px]" />
         </button>
       </div>
-    <div  className="overflow-hidden absolute bottom-[35%] w-full" >
+
+      </div>
+    <div  className="overflow-hidden  bottom-[35%] w-full" >
         <div id="card-container" className="grid grid-flow-col space-x-2 p-2">
           <Card image={Image1} text="diamonds" />
           <Card image={Image2} text="private island" />
@@ -76,7 +79,7 @@ const PageThree = () => {
           <Card image={Image8} text="travel the world" />
         </div>
       </div>
-    <div className="text-center absolute bottom-40 text-xl lg:text-4xl space-y-12 "><h1>one platform for all premium listings</h1><p className=' font-light'>unlimited potential</p></div>
+    <div className="text-center  bottom-40 text-xl lg:text-4xl space-y-12 "><h1>one platform for all premium listings</h1><p className=' font-light'>unlimited potential</p></div>
   </div>
 </div>
   )

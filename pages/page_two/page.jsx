@@ -30,7 +30,7 @@ const PageTwo = () => {
   }, []);
 
   return (
-<div className="h-full" >
+<div className="h-screen" >
       {/* <Image alt="" className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
       <div className="h-full relative flex justify-center items-center tracking-widest">
       <div className="text-center max-lg:text-xs absolute top-4 lg:top-16">a real estate and property platform that is changing the world</div>

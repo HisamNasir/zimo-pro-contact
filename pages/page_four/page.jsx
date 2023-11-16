@@ -4,7 +4,7 @@ import ImageCard from '@/public/assets/page4image.png'
 import Image from 'next/image'
 const PageFour = () => {
   return (
-    <div className="h-full" >
+    <div className="h-screen" >
     {/* <Image className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
     <div className="h-full relative lg:flex justify-between  items-center tracking-widest">
 
@@ -29,7 +29,7 @@ for all premium listings
         </div>
     </div>
 
-    <div className=" lg:pr-16 translate-y-20">
+    <div className=" lg:pr-16 ">
         <div className='max-lg:px-7'>
             <Image src={ImageCard} width={1083} height={718}/>
         </div>
