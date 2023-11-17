@@ -15,7 +15,9 @@ export default function Home() {
     <>
       {/* Set document head metadata */}
       <Head>
-        <title>Boilerplate</title>
+        <title>Page</title>
+        
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
     <main className='h-screen w-full uppercase'>

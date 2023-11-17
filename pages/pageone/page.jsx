@@ -7,13 +7,14 @@ import AVAVBorder from '@/public/assets/AVAVBorder.svg'
 import BackArrow from '@/public/assets/BackArrow.svg'
 import DownArrow from '@/public/assets/DownArrow.svg'
 import ZIMA from '@/public/assets/ZIMA.svg'
-import UKFlag from "@/components/UKFlag";
+
 import Clock from "@/components/Clock";
 import AVAV from "@/public/assets/AVAV.svg";
 import Cart from "@/public/assets/Cart.svg";
 import User from "@/public/assets/User.svg";
 import Wallpaper from '@/public/assets/Page1bg.png'
 import "aos/dist/aos.css";
+import CountryFlag from '@/components/CountryFlag';
 
 const PageOne = () => {
   const [shouldScroll, setShouldScroll] = useState(false);
@@ -77,7 +78,7 @@ const PageOne = () => {
               <span className="">
                 <Clock />
               </span>
-              <UKFlag />
+              <CountryFlag/>
             </div>
             <button className="p-1">
             <Image className=" h-[25px]" src={Cart}/>

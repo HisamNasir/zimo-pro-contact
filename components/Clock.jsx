@@ -1,4 +1,3 @@
-// components/Clock.js
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -28,7 +27,7 @@ const Clock = () => {
               day: 'numeric',
               hour: 'numeric',
               minute: 'numeric',
-              hour12: false, // Use 24-hour format
+              hour12: false,
               timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
             };
 
