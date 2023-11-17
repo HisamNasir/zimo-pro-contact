@@ -73,7 +73,7 @@ const PageOne = () => {
           </span>
         </div>
         <div className="text-right absolute top-2 md:top-16 right-2 lg:right-16  sm:top-16">
-          <div className=" flex items-center gap-6 md:gap-14">
+          <div className=" flex items-center gap-4 md:gap-14">
             <div className="flex max-lg:hidden items-center gap-4 text-[14px] leading-4">
               <span className="">
                 <Clock />
