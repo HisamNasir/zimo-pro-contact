@@ -45,7 +45,7 @@ const PageOne = () => {
 
 
   return (
-    <div className="h-screen bg-black relative overflow-hidden">
+    <div className="h-screen bg-black relative overflow-hidden" data-aos="fade-up"data-aos-once="false">
       <Image
         alt=""
         className="absolute h-full w-full object-cover -z-80 opacity-90"
@@ -60,9 +60,9 @@ const PageOne = () => {
             
             <Image className="invert  h-[25px] w-auto md:h-[50px]" src={ZIMA}/>
             
-            <p className="invert">about</p>
+            <p className="invert sm:text-[22px]">about</p>
           </div>
-          <button className="flex gap-4 sm:text-2xl items-center uppercase">
+          <button className="flex gap-4 sm:text-[22px] items-center uppercase">
           <Image className=" h-[16px]" src={BackArrow}/>
             <p>Back</p>
           </button>

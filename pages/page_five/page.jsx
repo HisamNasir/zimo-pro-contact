@@ -6,14 +6,14 @@ import AVAV from "@/public/assets/AVAV.svg";
 import BackArrow from "@/public/assets/BackArrow.svg";
 const PageFive = () => {
   return (
-    <div className="h-screen bg-black ">
+    <div className="h-screen bg-black " data-aos="fade-up"data-aos-once="false">
       <Image
         className="absolute h-full w-full object-cover -z-100 opacity-90 "
         src={Wallpaper}
         width={3841}
         height={2159}
       />
-      <div className="h-full relative flex p-4 lg:justify-center items-center text-white tracking-widest">
+      <div className="h-screen relative flex p-4 lg:justify-center items-center text-white tracking-widest">
         <div className="text-left absolute top-16 lg:right-16">
           <div>
             <h2 className=" text-4xl mb-8">Personalised for you</h2>
@@ -38,7 +38,7 @@ const PageFive = () => {
 
         <button className="text-right z-10 absolute right-16 flex gap-2 items-center p-4 hover:translate-x-8 transition-all duration-500 ">
           <p>create user id</p>
-          <Image className=" h-[16px] rotate-180" src={BackArrow} />
+          <Image className=" h-[16px] rotate-180 max-h-[100vh] max-w-[100vh]"src={BackArrow} />
         </button>
       </div>
     </div>

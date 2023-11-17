@@ -3,7 +3,7 @@ import ZIMAPartners from '@/components/ZIMAPartners'
 import React from 'react'
 const PageSeven = () => {
   return (
-    <div className="h-full" >
+    <div className="h-screen"  data-aos="fade-up"data-aos-once="false">
     {/* <Image className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
     <div className="h-full relative flex max-lg:flex-col justify-center max-lg:space-y-60 items-center tracking-widest">
 
