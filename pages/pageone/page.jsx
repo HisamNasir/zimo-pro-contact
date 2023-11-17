@@ -43,9 +43,8 @@ const PageOne = () => {
     }
   }, [shouldScroll]);
 
-
   return (
-    <div className="h-screen bg-black relative overflow-hidden" data-aos="fade-up"data-aos-once="false">
+    <div className="h-screen bg-black relative overflow-hidden" data-aos="fade-up" data-aos-once="false">
       <Image
         alt=""
         className="absolute h-full w-full object-cover -z-80 opacity-90"
@@ -54,60 +53,64 @@ const PageOne = () => {
         height={2159}
       />
       <div className="h-full relative flex flex-col justify-center items-center text-white tracking-widest">
-        <div className="text-left space-y-16 absolute left-2 lg:left-16 top-2 sm:top-16">
-          <div className="  invert flex gap-2 xl:gap-16 items-end">
-            <Image className="invert h-[25px] md:h-[50px] w-auto" src={AVAVBorder}/>
-            
-            <Image className="invert  h-[25px] w-auto md:h-[50px]" src={ZIMA}/>
-            
-            <p className="invert sm:text-[22px]">about</p>
+        <div className="text-left space-y-2 sm:space-y-4 md:space-y-6 absolute left-2 sm:left-8 top-2 sm:top-8">
+          <div className="invert flex gap-1 sm:gap-4 md:gap-6 items-end">
+            <Image className="invert h-[30px] sm:h-[40px] md:h-[50px]" src={AVAVBorder} />
+            <Image className="invert w-auto hidden xl:block  md:h-[50px]" src={ZIMA} />
+            <p className="invert sm:text-[14px] md:text-[18px]">about</p>
           </div>
-          <button className="flex gap-4 sm:text-[22px] items-center uppercase">
-          <Image className=" h-[16px]" src={BackArrow}/>
+          <button className="flex gap-1 sm:gap-2 sm:text-[14px] md:text-[18px] items-center uppercase">
+            <Image className="h-[10px] sm:h-[12px]" src={BackArrow} />
             <p>Back</p>
           </button>
         </div>
-        <div className=" max-xl:hidden text-center absolute top-16 ">
+        <div className="max-w-screen-md text-center absolute hidden sm:block top-4 sm:top-8">
           <span className="invert">
-          <Image className="invert h-[25px] xl:h-[50px]" src={AVAV}/>
+            <Image className="invert h-[20px] sm:h-[25px] md:h-[30px] xl:h-[50px]" src={AVAV} />
           </span>
         </div>
-        <div className="text-right absolute top-2 md:top-16 right-2 lg:right-16  sm:top-16">
-          <div className=" flex items-center gap-4 md:gap-14">
-            <div className="flex max-lg:hidden items-center gap-4 text-[14px] leading-4">
+        <div className="text-right absolute top-2 sm:top-8 right-2 sm:right-8">
+          <div className="flex items-center gap-2 sm:gap-4 md:gap-6">
+            <div className="flex max-lg:hidden items-center gap-1 sm:gap-2 md:gap-4 text-[10px] sm:text-[12px] md:text-[14px] leading-4">
               <span className="">
                 <Clock />
               </span>
-              <CountryFlag/>
+              {/* Adjusted the sizes for better responsiveness */}
+              <CountryFlag />
             </div>
             <button className="p-1">
-            <Image className=" h-[25px]" src={Cart}/>
+              <Image className="h-[20px] sm:h-[25px] md:h-[30px]" src={Cart} />
             </button>
             <button className="p-1">
-            <Image className=" h-[25px]" src={User}/>
+              <Image className="h-[20px] sm:h-[25px] md:h-[30px]" src={User} />
             </button>
           </div>
         </div>
-        <div className="text-left absolute left-4 md:left-16">
-          <h2 className="text-[24px] md:text-[40px]">Discover</h2>
-          <h1 className="text-4xl md:text-6xl">a new world</h1>
-          <p className="text-lg md:text-xl text-[#737373] mt-6">
+        <div className="text-left absolute left-2 sm:left-8">
+          <h2 className="font-light text-[18px] sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">Discover</h2>
+          <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl">a new world</h1>
+          <p className="text-xs sm:text-lg md:text-xl text-[#737373] mt-1 sm:mt-2 md:mt-4">
             for those who wish for more...
           </p>
         </div>
         <div className="text-center absolute bottom-4">
-          <div className="text-center space-y-16">
-            <p className=" md:text-xl text-[#737373] mt-6">
+          <div className="text-center space-y-2 sm:space-y-4 md:space-y-6">
+            <p className="text-xs sm:text-lg md:text-xl text-[#737373] mt-1 sm:mt-2 md:mt-4">
               Bringing the world closer together
             </p>
-            <button className="animate-bounce invert" onClick={() => setShouldScroll(true)}>
-          <Image className="h-[30px] lg:h-[80px] invert" src={DownArrow} />
-        </button>
+
+          <button id="down-arrow-button" className="animate-bounce">
+            <Image className="h-[20px] sm:h-[40px] md:h-[80px]" src={DownArrow} />
+          </button>
+
           </div>
         </div>
       </div>
     </div>
   );
+  
+  
+  
 };
 
 export default PageOne;
