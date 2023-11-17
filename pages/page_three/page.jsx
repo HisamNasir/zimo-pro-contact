@@ -93,7 +93,7 @@ const PageThree = () => {
 
         <div className="text-center absolute flex flex-col items-center justify-center w-full bottom-12 text-xl md:text-3xl lg:text-[45px] space-y-14">
           <h1>one platform for all premium listings</h1>
-          <p className="text-base md:text-2xl lg:text-4xl">unlimited potential</p>
+          <p className="text-base md:text-2xl lg:text-3xl xl:text-4xl">unlimited potential</p>
         </div>
       </div>
     </div>
