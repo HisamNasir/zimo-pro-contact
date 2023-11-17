@@ -1,4 +1,3 @@
-// getCountryCode.js
 import axios from 'axios';
 
 const IPSTACK_API_KEY = 'YOUR_IPSTACK_API_KEY';

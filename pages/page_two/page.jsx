@@ -31,7 +31,6 @@ const PageTwo = () => {
 
   return (
 <div className="h-screen page"  data-aos="fade-up" data-aos-once="false">
-      {/* <Image alt="" className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
       <div className="h-full relative flex justify-center items-center tracking-widest">
       <div className="text-center max-lg:text-xs absolute top-4 lg:top-16">a real estate and property platform that is changing the world</div>
       <div className="text-left absolute top-24 lg:top-32 left-4 lg:left-16">

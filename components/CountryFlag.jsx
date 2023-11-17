@@ -1,4 +1,3 @@
-// CountryFlag.js
 import React from 'react';
 import getCountryCode from './getCountryCode';
 import { hasFlag } from 'country-flag-icons';
