@@ -85,7 +85,7 @@ const PageThree = () => {
             <Card image={Image8} text="travel the world" />
           </div>
         </div>
-        <div className="text-center  bottom-40 text-xl lg:text-5xl space-y-12 ">
+        <div className="text-center  bottom-40 text-xl lg:text-[44px] space-y-12 ">
           <h1>one platform for all premium listings</h1>
           <p className=" text-lg md:text-[40px]">unlimited potential</p>
         </div>
