@@ -1,56 +1,79 @@
-import React, { useState, useEffect } from 'react';
+// components/Clock.js
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const Clock = () => {
-  const [currentTime, setCurrentTime] = useState(new Date());
-  const [location, setLocation] = useState({ city: '', country: '' });
+  const [locationData, setLocationData] = useState(null);
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 1000);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords;
 
-    // Extract city and country from timezone
-    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const [city, country] = extractLocation(timeZone);
-    setLocation({ city, country });
+        axios
+          .get(
+            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+          )
+          .then((response) => {
+            const address = response.data.address;
+            const city = address.city || address.town || address.village || address.hamlet || address.suburb;
 
-    return () => clearInterval(intervalId);
+            const country = address.country;
+
+            const date = new Date();
+            const options = {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+              hour: 'numeric',
+              minute: 'numeric',
+              hour12: false, // Use 24-hour format
+              timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+            };
+
+            const formattedDate = date.toLocaleDateString(undefined, options);
+            const [weekday, monthYear, time] = formattedDate.split(', ');
+
+            setLocationData({
+              city,
+              country,
+              weekday,
+              monthYear,
+              time,
+            });
+          })
+          .catch((error) => {
+            console.error('Error fetching location data:', error);
+          });
+      },
+      (error) => {
+        console.error('Error getting geolocation:', error);
+      }
+    );
   }, []);
-
-  const extractLocation = (timeZone) => {
-    const [city, country] = timeZone.split('/').slice(-2);
-    return [city || timeZone, country || ''];
-  };
-
-  const formatTime = (date) => {
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    return `${hours}:${minutes}`;
-  };
-
-  const formatDate = (date) => {
-    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-    const day = dayNames[date.getDay()];
-    const month = monthNames[date.getMonth()];
-    const dayOfMonth = date.getDate().toString().padStart(2, '0');
-    const year = date.getFullYear();
-
-    return `${day}, ${dayOfMonth} ${month} ${year}`;
-  };
-
   return (
-    <div className=" text-right">
-      <div className="flex gap-3">
-        <div>{formatTime(currentTime)}</div>
-        <p>{location.city}</p>
-        <p>{location.country}</p>
-      </div>
+    <div className="text-right">
+      {locationData ? (
+        <div className=''>
+          <p className=''>
+          <span>{locationData.time.split(' at ')[1]}</span>&nbsp;
+          <span>{locationData.city}</span>&nbsp;
+          <span>{locationData.country}</span>
 
-      <div className="text-[#BE9F56]">
-        {formatDate(currentTime)}
-      </div>
+          </p>
+          <p className='text-[#BE9F56]'>
+            <span>{locationData.weekday}</span>
+            <span>{locationData.monthYear.split(' ')[1]}</span>&nbsp;
+            <span>{locationData.monthYear.split(' ')[0]}</span>&nbsp;
+            <span>{locationData.time.split(' at ')[0]}</span>
+
+            
+          </p>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
     </div>
   );
 };
