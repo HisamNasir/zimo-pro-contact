@@ -27,7 +27,7 @@ const PageThree = () => {
   return (
     <div className="h-screen page" data-aos="fade-up" data-aos-once="false">
       <div className="h-full relative flex flex-col justify-center tracking-widest">
-        <div className='absolute top-40 lg:top-28 xl:top-32 w-full'>
+        <div className='absolute top-40 lg:top-24 w-full'>
           <div className="flex items-center relative">
             <div className="p-4 text-base md:text-2xl lg:text-3xl xl:text-4xl">our categories</div>
             <div className="p-4 absolute right-0 gap-2 sm:gap-4 flex justify-between">
@@ -40,7 +40,7 @@ const PageThree = () => {
             </div>
           </div>
         </div>
-        <div className='p-2 sm:p-4 absolute w-full'>
+        <div className='px-2 sm:px-4 absolute -translate-y-8 w-full'>
           <Swiper
             slidesPerView={1}
             spaceBetween={10}
