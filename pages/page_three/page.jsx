@@ -60,22 +60,21 @@ const PageThree = () => {
 
   return (
     <div className="h-screen page"  data-aos="fade-up"data-aos-once="false">
-      {/* <Image alt="" className="absolute h-full w-auto object-cover -z-160 opacity-90" src={Wallpaper} width={3841} height={2159}/> */}
-      <div className="h-full relative flex flex-col justify-between  tracking-widest">
-        <div className="flex relative">
+      <div className="h-full relative flex flex-col justify-center  tracking-widest">
+        <div className="flex items-center relative">
           <div className=" p-8  text-xl  lg:text-[40px]">our categories</div>
 
           <div className=" p-8 absolute right-0  w-[129px] flex justify-between">
             <button id="left" className="invert rotate-90">
-              <Image src={DownArrow} className="h-[20px]" />
+              <Image src={DownArrow} className=" h-[10px] md:h-[20px]" />
             </button>
             <button id="right" className="invert -rotate-90">
-              <Image src={DownArrow} className="h-[20px]" />
+              <Image src={DownArrow} className=" h-[10px] md:h-[20px]" />
             </button>
           </div>
         </div>
-        <div className="overflow-hidden  bottom-[35%] w-full">
-          <div id="card-container" className="grid grid-flow-col space-x-2 p-2">
+        <div className="overflow-hidden mb-10 md:h-[40vh] w-full">
+          <div id="card-container" className="grid grid-flow-col h-full space-x-2 p-2">
             <Card image={Image1} text="diamonds" />
             <Card image={Image2} text="private island" />
             <Card image={Image3} text="real estate" />
@@ -86,9 +85,9 @@ const PageThree = () => {
             <Card image={Image8} text="travel the world" />
           </div>
         </div>
-        <div className="text-center  bottom-40 text-xl lg:text-4xl space-y-12 ">
+        <div className="text-center  bottom-40 text-xl lg:text-5xl space-y-12 ">
           <h1>one platform for all premium listings</h1>
-          <p className=" font-light">unlimited potential</p>
+          <p className=" text-lg md:text-[40px]">unlimited potential</p>
         </div>
       </div>
     </div>
