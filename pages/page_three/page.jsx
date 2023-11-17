@@ -29,7 +29,7 @@ const PageThree = () => {
       <div className="h-full relative flex flex-col justify-center tracking-widest">
         <div className='absolute top-40 lg:top-28 xl:top-32 w-full'>
           <div className="flex items-center relative">
-            <div className="p-4 text-base md:text-3xl lg:text-4xl xl:text-5xl">our categories</div>
+            <div className="p-4 text-base md:text-2xl lg:text-3xl xl:text-4xl">our categories</div>
             <div className="p-4 absolute right-0 gap-2 sm:gap-4 flex justify-between">
               <button id="swiper-left" className="invert rotate-90">
                 <Image src={DownArrow} className=" h-3 lg:h-[20px]" />
